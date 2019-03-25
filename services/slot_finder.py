@@ -12,6 +12,10 @@ WEEK_LEN = 7
 class SlotFinder(object):
 
     def get_next_n_slots(self, week_config: List[List[Dict]], current_time: datetime, n=10):
+        """
+        Returns `n` available slots from the `current_time` on the basis of `week_config`. returns empty list, 
+        if any slot is not abailable.
+        """
         next_n_slots = []
         week_day = current_time.weekday()
         idx_week = week_day
